@@ -19,6 +19,11 @@ public class AAD_MappingRelations {
 		s.setName("Navin");
 		s.setRollno(1);
 		s.setMarks(50);
+		s.getLaptop().add(laptop);
+		// s.setLaptop(laptop); // One to one example.
+
+		laptop.getStudent().add(s);
+		
 		
 		Configuration config = new Configuration().configure().addAnnotatedClass(Student.class).addAnnotatedClass(Laptop.class);
         ServiceRegistry reg = new ServiceRegistryBuilder().applySettings(config.getProperties()).buildServiceRegistry();
