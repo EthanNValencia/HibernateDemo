@@ -36,4 +36,5 @@ public class AAA_SimpleDBInsertion
         session.save(nephew);
         tx.commit(); // nephew is stored into db
     }
+    
 }

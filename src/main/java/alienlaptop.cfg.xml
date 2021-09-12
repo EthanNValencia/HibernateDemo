@@ -6,10 +6,14 @@
     <session-factory>
         <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
         <property name="hibernate.connection.password">pw</property>
-        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/neon</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/alien_laptop</property>
         <property name="hibernate.connection.username">neon-hibernate</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     	<property name="hbm2ddl.auto">update</property>	
-		<property name="show_sql">true</property>	    	
-     </session-factory>
+		<property name="show_sql">true</property>             
+		<property name="hibernate.cache.use_second_level_cache">true</property> 
+		<property name="hibernate.generate_statistics">true</property>
+		<property name="hibernate.cache.use_query_cache">true</property>
+		<property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
+    </session-factory>
 </hibernate-configuration>
